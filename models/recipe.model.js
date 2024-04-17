@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const recipeSchema = mongoose.Schema(
+const recipeSchema = new mongoose.Schema(
   {
     title: {
       type: String,
@@ -38,6 +38,5 @@ const recipeSchema = mongoose.Schema(
   { timestamps: true },
 );
 
-
 const Recipe = mongoose.model("Recipe", recipeSchema);
-module.exports = Recipe
+module.exports = Recipe;
